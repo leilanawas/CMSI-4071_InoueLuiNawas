@@ -1,0 +1,49 @@
+CMSI 4071 Fall 2026
+Project Proposal Feedback
+Project: Stockd AI-powered refrigerator application
+=========================
+Guideline Requirement                        Status
+-------------------------------     ----------------------------
+High-level overview                 Meets or Exceeds Requirement
+Comparison to existing software     Meets or Exceeds Requirement
+Important features listed           Meets or Exceeds Requirement
+Hardware/software Requirements      Meets or Exceeds Requirement
+End users identified                Meets or Exceeds Requirement
+Maintenance discussed               Missing
+Applies prior learning              Meets or Exceeds Requirement
+Extends prior learning              Meets or Exceeds Requirement
+Appropriate difficulty              Partial fulfilled
+Feasible in one semester            Missing
+Required skills/tools available     Partial fulfilled
+Interest and motivation             Meets or Exceeds Requirement
+
+
+Summary:
+--------
+Overall Assessment
+MLP Senior Project Proposal addresses most of the required proposal elements
+and provides a strong project description.  However, relative to the CMSI
+4071 guidelines, several justification and maintenance components are either
+missing or only partially addressed:
+
+   Maintenance discussion is missing.
+   Semester feasibility is not explicitly addressed.
+   Appropriate technical difficulty is implied but not directly discussed.
+   Possession of required skills and tools could be stated more explicitly.
+
+Guideline-Based Recommendation
+Add a short paragraph addressing:
+
+   How the system would be maintained,
+   Why the planned scope is achievable within one semester,
+   Why the technical complexity is appropriate,
+   What experience and resources the team already possesses.
+
+With those additions, the proposal would align much more closely with all of
+the written proposal requirements in the CMSI 4071 guidelines.
+
+Earned 4.5% for this deliverable.
+
+Very nice job overall!  Your presentation was very good.
+
+Keep up the good work.
