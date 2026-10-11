@@ -1,0 +1,40 @@
+
+Documentation Feedback ~ Deliverable #2
+Software Requirements Specification
+Initial Development Schedule
+CMSI 4071 Fall 2026
+=======================================
+
+COMPONENT BREAKDOWN:
+   Nothing submitted.
+
+FUNCTIONAL REQUIREMENTS:
+   Nothing submitted.
+
+PERFORMANCE REQUIREMENTS:
+   Nothing submitted.
+
+ENVIRONMENT REQUIREMENTS:
+   Nothing submitted.
+
+OVERALL ASSESSMENT:
+   Category                          Points
+   Component Breakdown                 0/1
+   Functional Requirements             0/4
+   Performance Requirements            0/2
+   Environment Requirements            0/1
+                                     =====
+   Subtotal                            0/8
+   Preliminary Schedule                0/2   See below.
+   ------------------------------------------------------
+   Total Percentage:   0/10 = 00% which is NOT an A-plus
+
+OVERALL ASSESSMENT:
+   You don't have an SRS document in your repository so I can't give you any
+   evaluation for it.
+
+   You also don't have a schedule, which was part of the deliverable for
+   this segment.
+
+   You can still get credit for the SRS since you have a second pass at the
+   document during the semester.  It's late, but you can still get points.
