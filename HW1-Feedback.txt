@@ -5,27 +5,49 @@ CMSI 4071 Fall 2026
 ======================
 
 SUMMARY:
-
+   The essay provides a clear and accurate summary of the article's major
+      points.  The summary accurately captures both the factual details and
+      the article's broader message about technological dependency.
+   Minor deductions because the summary could discuss the cybersecurity
+      aspects of the attack in greater depth.
 
 RELATION TO S/W ENGINEERING
-
+   The software engineering discussion is strong and directly connected to
+      the article.
+   Particularly strong is your emphasis on designing systems with failure in
+      mind rather than assuming systems will always operate correctly.  This
+      aligns closely with modern software engineering practices.
+   The discussion could be strengthened further through explicit references
+      to concepts such as requirements engineering, fault tolerance, disaster
+      recovery planning, reliability engineering, and system-of-systems
+      architecture.
 
 THOUGHTS/OPINIONS
-
+   The essay contains meaningful personal analysis beyond simple summary.
+   Examples include:
+      The group's surprise at learning how heavily Garmin was involved in
+         aviation services.
+      The argument that engineers must understand dependencies rather than
+         viewing systems as isolated components.
+      Reflections on ethical responsibilities when software affects large
+         populations
+   These observations demonstrate thoughtful engagement with the article.
 
 SPELLING/GRAMMAR
-
+   The paper is generally well written and easy to follow.  You have a
+      logical organization and clear progression from summary to analysis,
+      along with good paragraph structure, very few spelling errors, and a
+      consistent academic tone.
 
 OVERALL ASSESSMENT:
    Category                          Points
-   Summary of article                   0
-   Relation to S/W engineering          0
-   Thoughts/opinions presented          0
-   Spelling/Grammar                     0
+   Summary of article                  29
+   Relation to S/W engineering         29
+   Thoughts/opinions presented         30
+   Spelling/Grammar                    10
                                      -----
-   Subtotal                             0
+   Subtotal                            98
    ------------------------------------------------------
-   Total Percentage:   0 out of 100 = 0% which is an F on this assignment
+   Total Percentage:  98 out of 100 = 98% which is an A-plus on this assignment
 
-Not attempted and/or not turned in by the due date.
 
