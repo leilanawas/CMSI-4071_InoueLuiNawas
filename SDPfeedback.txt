@@ -1,0 +1,114 @@
+
+Documentation Feedback ~ Deliverable #3
+Software Development Plan [SDP]
+CMSI 4071 Fall 2026
+=======================================
+
+INTRODUCTION/DELIVERABLES SECTION:
+   Assessment: Partially Complete
+      Strengths
+         • The project vision and intended functionality are clearly
+           described.
+         • Major course deliverables are identified through the Class
+           Schedule section.
+         • The project roadmap shows how functionality will be
+           delivered incrementally.
+         • Development priorities are clearly established.
+      Areas for Improvement
+         • The SDP does not contain a dedicated Deliverables section.
+         • Project-specific deliverables are not defined in detail.
+         • Acceptance criteria are largely absent.
+         • Ownership for deliverables is not assigned.
+      Suggestions
+         1. Add a dedicated Deliverables section listing every major
+            technical, documentation, testing, presentation, and final
+            delivery artifact with descriptions and completion dates.
+         2. Define measurable acceptance criteria and assign a primary
+            owner for each deliverable.
+
+PROJECT RESOURCES SECTION:
+   Assessment: Very Good
+      Strengths
+         • Hardware and software resources are clearly separated.
+         • Resource descriptions explain how each item will be used.
+         • Hardware planning supports both early software prototypes
+           and later hardware integration.
+         • Software technologies are appropriate for the project's
+           objectives.
+         • Resource planning reflects awareness of implementation
+           needs and project constraints.
+      Areas for Improvement
+         • Hardware specifications are somewhat minimal.
+         • Resource availability and contingency planning are not
+           discussed.
+      Suggestions
+         1. Include minimum hardware specifications and expected
+            performance requirements for development and deployment.
+         2. Document backup plans for critical resources such as the
+            vision service, Raspberry Pi hardware, and cloud services.
+
+PROJECT ORGANIZATION SECTION:
+   Assessment: Good
+      Strengths
+         • Major work areas are identified clearly.
+         • The team emphasizes collaboration and peer review.
+         • Development, testing, and documentation activities are
+            recognized as important responsibilities.
+         • The development process is described sufficiently to show
+            how work will be coordinated.
+      Areas for Improvement
+         • Individual responsibilities are not assigned.
+         • No organizational chart or reporting structure is
+           provided.
+         • Communication procedures are informal.
+      Suggestions
+         1. Assign each team member ownership of specific technical
+            areas and project responsibilities.
+         2. Add an organizational chart and define meeting schedules,
+            decision-making procedures, and conflict-resolution
+            processes.
+
+PROJECT SCHEDULE SECTION:
+   Assessment: Very Good
+      Strengths
+         • Includes a GANTT-style schedule spanning the remainder of
+           the semester.
+         • Provides a Task/Resource Table linking activities to
+           resources and target dates.
+         • Includes a Class Schedule section that maps project work to
+           course deliverables.
+         • The schedule reflects a reasonable progression from
+           software development to hardware integration and testing.
+         • Risk awareness is reflected in the planning approach.
+      Areas for Improvement
+         • Task dependencies are not explicitly documented.
+         • Critical-path activities are not identified.
+         • Resource assignments are not tied to specific team members.
+      Suggestions
+         1. Add task dependencies and identify critical-path
+            activities that could affect final delivery.
+         2. Assign responsible team members to major tasks and include
+            effort estimates for improved schedule tracking.
+
+
+OVERALL ASSESSMENT:
+   Category                          Points
+   Project Deliverables                0.7
+   Project Resources                   0.9
+   Project Organization                0.8
+   Project Schedule                    1.8
+                                     =====
+   Subtotal                            4.2
+   ------------------------------------------------------
+   Total Percentage:   4.2/5 = 84% which is a B
+
+   This SDP presents a solid Agile-oriented plan for developing the Stockd
+      smart refrigerator system.  The project vision is clear, the technical
+      resources are appropriate, and the schedule demonstrates a realistic
+      progression from prototype development to hardware integration.
+   The document's largest weakness is the absence of a dedicated Deliverables
+      section and the limited detail within the Project Organization section.
+      Strengthening those areas would improve project accountability,
+      traceability, and management visibility.
+
+Not a bad start!  Perform some of those changes by the end of the semester...
