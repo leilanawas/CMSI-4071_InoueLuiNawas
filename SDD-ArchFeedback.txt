@@ -1,0 +1,313 @@
+
+Documentation Feedback ~ Deliverable #4
+Software Design Document ~ Architecture
+CMSI 4071 Fall 2026
+=======================================
+
+INTRODUCTION SECTION:
+   System objectives section
+      Strengths
+         Objectives align closely with requirements.
+         User goals are easy to understand.
+         Recognition review is appropriately emphasized.
+         Scope limitations are clearly stated.
+      Suggestions
+         Include measurable objectives linked to performance
+            requirements.
+         Include objectives related to persistence, reliability, and
+            scalability.
+         Add objectives for notification performance and recipe update
+            behavior.
+
+   Hardware, software, and human interfaces section
+      Strengths
+         Covers major interface categories.
+         Explains current and planned hardware options.
+         Describes user-facing interactions clearly.
+         Maintains reasonable architectural focus.
+      Suggestions
+         Expand discussion of system boundaries and trust boundaries.
+         More clearly separate current implementation status from
+            architectural intent.
+         Add discussion of failure handling and interface contracts.
+      IMAGE CAPTURE INTERFACE
+         Strengths
+            Clearly describes current and future capture paths.
+            Maintains consistency with phone-first and Pi-based operation.
+            Preserves door-triggered architecture.
+         Suggestions
+            Explain how duplicate captures are prevented.
+            Discuss camera-failure handling.
+            Clarify image-identification and timestamp ownership.
+      NETWORK INTERFACE
+         Strengths
+            Clearly identifies communication paths.
+            Supports future Raspberry Pi deployment.
+         Suggestions
+            Identify protocols more precisely.
+            Discuss security mechanisms.
+            Describe behavior during connectivity failures.
+      FOOD RECOGNITION INTERFACE
+         Strengths
+            Preserves candidate-label and confidence concepts.
+            Supports review-before-save workflow.
+            Includes fallback capability.
+         Suggestions
+            Describe confidence-threshold handling.
+            Clarify low-confidence review workflow.
+            Discuss recognition-status reporting requirements.
+      DATA MANAGEMENT INTERFACE
+         Strengths
+            Clearly shows backend ownership of persistence.
+            Maintains separation between application and storage.
+            Includes local mock-storage capability.
+         Suggestions
+            Discuss validation responsibilities.
+            Clarify persistence guarantees.
+            Discuss authentication requirements.
+            Describe save-failure handling.
+      APPLICATION INTERFACE
+         Strengths
+            Provides a useful overview of user-visible functionality.
+            Covers inventory, scanning, alerts, and recipes.
+         Suggestions
+            More explicitly map screens to CSC responsibilities.
+            Clarify navigation flows.
+            Discuss loading and error states.
+      NOTIFICATION AND RECIPE INTERFACES
+         Strengths
+            Covers both required baseline functions.
+            Preserves recipe non-destructive behavior.
+            Aligns well with requirements scope.
+         Suggestions
+            Describe alert generation ownership.
+            Describe alert lifecycle management.
+            Explain recipe-update triggers.
+            Clarify missing-ingredient determination.
+
+
+ARCHITECTURAL DESIGN SECTION:
+   Major software components section
+      Strengths
+         Clearly explains overall system flow.
+         Preserves major subsystem boundaries.
+         Supports future hardware evolution.
+         Maintains a simple and understandable architecture.
+      Suggestions
+         Identify architectural patterns explicitly.
+         Discuss important tradeoffs.
+         Connect architecture to quality attributes and performance goals.
+      MAJOR SOFTWARE COMPONENTS
+            Strengths
+               Preserves CSC names from the requirements.
+               Component responsibilities are understandable.
+               Good traceability between requirements and design.
+            Suggestions
+               Provide more detail for each CSC.
+               Describe interfaces between CSCs.
+               Include inputs, outputs, and ownership boundaries.
+         IMAGE CAPTURE CSC
+            Strengths
+               Responsibility is clearly defined.
+               Supports both current and future capture approaches.
+            Suggestions
+               Describe interaction with Automatic Capture Event CSU.
+               Clarify retry and failure handling.
+         FOOD RECOGNITION CSC
+            Strengths
+               Responsibilities are easy to understand.
+               Matches recognition requirements closely.
+            Suggestions
+               Describe confidence processing.
+               Clarify review-triggering logic.
+               Explain processing-status ownership.
+         INVENTORY MANAGEMENT CSC
+            Strengths
+               Covers inventory operations well.
+               Includes automatic add/remove proposals.
+            Suggestions
+               Explain duplicate-resolution strategy.
+               Describe inventory-change determination.
+               Discuss quantity-validation responsibilities.
+         EXPIRATION MANAGEMENT CSC
+            Strengths
+               Recognizes expiration-date ownership.
+               Includes user-edit capability.
+            Suggestions
+               Discuss estimation mechanisms.
+               Explain expiration-status calculations.
+               Clarify interaction with notifications.
+         APPLICATION INTERFACE CSC
+            Strengths
+               Provides clear screen ownership.
+               Includes recognition-review workflow.
+            Suggestions
+               Define UI responsibilities more precisely.
+               Discuss error presentation and loading states.
+         DATA MANAGEMENT CSC
+            Strengths
+               Establishes persistence responsibilities.
+               Includes validation role.
+            Suggestions
+               Elaborate on authentication.
+               Discuss persistence guarantees.
+               Clarify record-identity responsibilities.
+         NOTIFICATION CSC
+            Strengths
+               Covers required alert functionality.
+               References read/unread behavior.
+            Suggestions
+               Describe evaluation scheduling.
+               Explain alert suppression rules.
+               Clarify dismissal handling.
+         RECIPE SUGGESTIONS CSC
+            Strengths
+               Clearly aligned with requirements.
+               Maintains inventory-based recommendation logic.
+            Suggestions
+               Describe ingredient-matching responsibilities.
+               Explain update triggers.
+               Discuss behavior when no recipes match.
+         SUPPORTING RUNTIME PIECES
+            Strengths
+               Useful deployment-oriented explanation.
+               Clarifies hosting responsibilities.
+            Suggestions
+               Separate deployment discussion from CSC discussion.
+               Include backend availability considerations.
+
+   Major software interactions section
+      Strengths
+         Easy to understand.
+         Follows user workflow clearly.
+         Preserves confirmation-before-update behavior.
+      Suggestions
+         Provide more architectural detail.
+         Include error and recovery scenarios.
+         Discuss concurrency considerations.
+      1. IMAGE CAPTURE -> RECOGNITION
+         Strengths
+            Clear interface definition.
+            Maintains common recognition path.
+         Suggestions
+            Describe processing-state reporting.
+            Discuss duplicate-request handling.
+      2. RECOGNITION -> INVENTORY PROPOSALS
+         Strengths
+            Captures required reconciliation functionality.
+         Suggestions
+            Describe how additions and removals are determined.
+            Clarify low-confidence processing.
+      3. REVIEW AND CORRECTION
+         Strengths
+            One of the strongest interactions.
+            Consistent with requirements.
+            Clearly places users in final control.
+         Suggestions
+            Discuss save-cancellation behavior.
+            Clarify correction persistence.
+      4. CONFIRM -> DATA MANAGEMENT
+         Strengths
+            Maintains separation of responsibilities.
+            Supports persistence requirements.
+         Suggestions
+            Describe transaction handling.
+            Explain failure responses.
+      5. MANUAL INVENTORY EDITS
+         Strengths
+            Preserves manual-override capability.
+         Suggestions
+            Clarify validation behavior.
+            Describe duplicate handling.
+      6. EXPIRATION -> NOTIFICATION
+         Strengths
+            Captures required information flow.
+         Suggestions
+            Explain evaluation frequency.
+            Discuss alert lifecycle rules.
+      7. INVENTORY -> RECIPES
+         Strengths
+            Preserves inventory-driven recommendations.
+         Suggestions
+            Describe matching responsibilities.
+            Clarify refresh behavior after inventory changes.
+
+   Architectural design diagrams section
+      Strengths
+         Appropriate architectural viewpoints.
+         Diagrams are consistent with the written design.
+         Sequence-style flow is particularly useful.
+      Suggestions
+         Add explanatory text for each diagram.
+      USE CASE DIAGRAM
+         Strengths
+            Captures major user actions.
+            Covers baseline functionality.
+         Suggestions
+            Include additional administrative or maintenance use cases if
+               relevant.
+            Show relationships among related use cases.
+      COMPONENT DIAGRAM
+         Strengths
+            Shows major architectural elements clearly.
+            Demonstrates major communication paths.
+         Suggestions
+            None
+      HIGH-LEVEL MODULE DIAGRAM
+         Strengths
+            Good decomposition of backend responsibilities.
+            Shows dependency relationships.
+         Suggestions
+            Clarify mapping between modules and CSCs.
+      PICTURE-TO-INVENTORY UPDATE FLOW
+         Strengths
+            Strong illustration of principal workflow.
+            Consistent with requirements.
+            Demonstrates user confirmation appropriately.
+         Suggestions
+            Include error and alternate flows.
+
+
+OVERALL ASSESSMENT:
+   Category                            Points
+   -----------------------------       ------
+   INTRODUCTION:
+      System objectives              0.5 of 1
+      H/W, S/W, Human I/F              2 of 2
+
+   ARCHITECTURAL DESIGN SECTION:
+      Major software components        2 of 2
+      Major software interactions      1 of 2
+      Architectural design diagrams    3 of 3
+                                       ======
+                                          8.5
+   ------------------------------------------------------
+   Total Percentage:  8.5/10 = 85% which is a B
+
+COMMENTS:
+The architectural SDD presents a coherent high-level architecture that is
+largely consistent with the requirements.  The document correctly preserves
+the major CSC decomposition and provides a reasonable description of how
+image capture, recognition, inventory management, persistence,
+notifications, and recipe recommendations interact.
+
+The document is strongest in maintaining traceability to the SRS, preserving
+the required review-and-confirm workflow, and presenting a clear end-to-end
+system flow.  Its main weakness is that it often describes the current
+implementation rather than the target architecture required by the SRS.
+Several sections are relatively brief and do not fully discuss architectural
+responsibilities, interfaces, quality attributes, performance considerations,
+or failure handling.
+
+The design demonstrates solid architectural thinking.  The strongest aspects
+are traceability, preservation of the review-and-confirm model, and clear
+architectural diagrams.
+
+The primary improvement opportunities involve expanding architectural detail
+for the Data Management, Notification, Expiration Management, and Recipe
+Suggestions CSCs, adding more discussion of performance requirements, and
+strengthening descriptions of interfaces and failure handling.
+
+Overall Rating: Good Architectural SDD
+
+Good work overall!
